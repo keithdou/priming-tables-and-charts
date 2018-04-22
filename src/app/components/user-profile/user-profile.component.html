@@ -1,0 +1,70 @@
+<p>
+	<p-messages [(value)]="msgs"></p-messages>
+
+</p> 
+<h2>User profile</h2>
+
+<form [formGroup]="userProfileForm" (ngSubmit)="confirmProfile()">		
+	<div class="ui-g">
+		<div class="ui-g-2">
+			Username
+			<span style="color:red">*</span>
+		</div>
+		<div class="ui-g-10">
+			<input type="text" 
+			maxlength="16"
+			size="30"
+			pInputText
+			formControlName="username"  
+			placeholder="User id" />
+		</div>
+		<div class="ui-g-2">
+			Email
+			<span style="color:red">*</span>
+		</div>
+		<div class="ui-g-10">
+			<input type="email" 
+			maxlength="20"
+			size="30"
+			pInputText 
+			formControlName="email"  
+			placeholder="email"
+			required/>
+			<div class="ui-message ui-messages-error ui-corner-all" 
+			*ngIf="!userProfileForm.controls['email'].valid && userProfileForm.controls['email'].dirty">
+			<i class="fa fa-close"></i>
+			email is required
+		    </div>
+		</div>
+		<div class="ui-g-2">
+			Mobile
+			<span style="color:red">*</span>
+		</div>
+		<div class="ui-g-10">
+			<input type="mobile" 
+			maxlength="10"
+			size="16"
+			pInputText 
+			formControlName="mobile"  
+			placeholder="mobile number"
+			required/>
+		</div>
+		<div class="ui-g-2">
+			Contact address
+			</div>
+		<div class="ui-g-10">
+			<input type="contactAddress" 
+			maxlength="80"
+			size="60"
+			pInputText 
+			formControlName="contactAddress"  
+			placeholder="street, suburb, state"/>
+		</div>
+	</div>
+
+
+<br/>
+
+<button pButton type="submit" label="Continue"></button>
+</form>
+

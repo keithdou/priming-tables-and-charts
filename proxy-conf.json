@@ -1,0 +1,8 @@
+{
+  "/state/get/USA/all/*": {
+    "target": "http://services.groupkt.com",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}

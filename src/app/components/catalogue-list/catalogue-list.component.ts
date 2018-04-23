@@ -13,6 +13,8 @@ export class CatalogueListComponent implements OnInit {
 
 	stateList : State[];
 
+	selectedState : State;
+
 	ngOnInit() {
 		this.userProfileService.getCatalogue()
 		.subscribe (
@@ -25,5 +27,9 @@ export class CatalogueListComponent implements OnInit {
 
 	formatArea(area : number) {
 		return area.toLocaleString();
+	}
+
+	onRowSelect(event) {
+		console.log("onRowSelect:" + event.data.name);
 	}
 }

@@ -1,4 +1,6 @@
-<p-table [value]="stateList"  [rows]="16" [paginator]="true">    
+<p-table [value]="stateList"  [rows]="16" [paginator]="true" 
+         selectionMode="single" [(selection)]="selectedState" 
+         (onRowSelect)="onRowSelect($event)" dataKey="id">    
     <ng-template pTemplate="header">
         <tr>
             <th [pSortableColumn]="'name'">
@@ -18,7 +20,7 @@
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-state>
-        <tr>
+        <tr  [pSelectableRow]="state">
             <td>{{state.name}}</td>
             <td>{{state.abbr}}</td>
             <td>{{state.capital}}</td>

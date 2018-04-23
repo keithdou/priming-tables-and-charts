@@ -11,7 +11,10 @@
               <p-sortIcon [field]="'capital'"></p-sortIcon>
             </th>
             <th>Largest City</th>
-            <th>Area</th>
+            <th [pSortableColumn]="'areaAsNumber'">
+              Area (sq.km)
+              <p-sortIcon [field]="'area'"></p-sortIcon>
+            </th>
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-state>
@@ -20,7 +23,7 @@
             <td>{{state.abbr}}</td>
             <td>{{state.capital}}</td>
             <td>{{state.largest_city}}</td>
-            <td>{{state.area}}</td>
+            <td>{{formatArea(state.areaAsNumber)}}</td>
         </tr>
     </ng-template>
 </p-table>

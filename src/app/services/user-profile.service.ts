@@ -67,8 +67,17 @@ export class UserProfileService {
 			data => {
 				let restResponseResult = data as RestResponseResult;
 				let stateList = <Array<State>>restResponseResult.RestResponse.result;
+				for (let state of stateList) {
+					state.areaAsNumber = this.areaToNumber(state.area);
+				}		
+
 				return stateList;
 			});
+	}
+
+
+	areaToNumber(area : string) : number {
+		return parseInt(area.replace('SKM','').trim());
 	}
 
 	isLoggedIn() {

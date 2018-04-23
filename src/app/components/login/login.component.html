@@ -6,42 +6,42 @@
 
 <form [formGroup]="loginForm" (ngSubmit)="doLogin()">		
 	<div class="ui-g">
-			<div class="ui-g-2">
-				Username
-				<span style="color:red">*</span>
-			</div>
-			<div class="ui-g-10">
-				<input type="text" 
-				maxlength="16"
-				size="30"
-				pInputText
-				formControlName="userid"  
-				placeholder="User id"
-				required/>
-				<div class="ui-message ui-messages-error ui-corner-all" 
-				   *ngIf="!loginForm.controls['userid'].valid && loginForm.controls['userid'].dirty">
-				   <i class="fa fa-close"></i>
-				userid is required
-			    </div>
-	</div>
 		<div class="ui-g-2">
-			Password
+			Username
 			<span style="color:red">*</span>
 		</div>
 		<div class="ui-g-10">
-			<input type="password" 
-			maxlength="20"
+			<input type="text" 
+			maxlength="16"
 			size="30"
 			pInputText
-			formControlName="password"  
-			placeholder="Password"
+			formControlName="userid"  
+			placeholder="User id"
 			required/>
 			<div class="ui-message ui-messages-error ui-corner-all" 
-			*ngIf="!loginForm.controls['password'].valid && loginForm.controls['password'].dirty">
+			*ngIf="!loginForm.controls['userid'].valid && loginForm.controls['userid'].dirty">
 			<i class="fa fa-close"></i>
 			userid is required
 		</div>
 	</div>
+	<div class="ui-g-2">
+		Password
+		<span style="color:red">*</span>
+	</div>
+	<div class="ui-g-10">
+		<input type="password" 
+		maxlength="20"
+		size="30"
+		pInputText
+		formControlName="password"  
+		placeholder="Password"
+		required/>
+		<div class="ui-message ui-messages-error ui-corner-all" 
+		*ngIf="!loginForm.controls['password'].valid && loginForm.controls['password'].dirty">
+		<i class="fa fa-close"></i>
+		userid is required
+	</div>
+</div>
 </div>
 
 <br/>

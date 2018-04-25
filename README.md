@@ -1,6 +1,26 @@
-# PrimengCatalogue
+## PrimengCatalogue
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
+
+It demonstrates some basic tables and chart layouts using PrimeNG.  Data is retrieved from a public REST service at http://services.groupkt.com - a list of USA states.
+
+## Setup
+
+npm install 
+npm install primeng --save
+npm install font-awesome
+npm install -g json-server
+npm install chart.js --save
+
+## Features (still under development)
+
+* Proxy server to avoid CORS issues (use npm start to launch)
+* REST service GET and PUT
+* Angular / PrimeNG forms with validation
+* PrimeNG tables - sorts and pagination
+* PrimeNG charts and drill-down using dialogues
+* Angular Router with child components and guards
+
 
 ## Development server
 

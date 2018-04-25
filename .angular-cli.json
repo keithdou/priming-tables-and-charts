@@ -22,7 +22,8 @@
         "styles.css",
         "../node_modules/font-awesome/css/font-awesome.min.css",
         "../node_modules/primeng/resources/themes/redmond/theme.css",
-        "../node_modules/primeng/resources/primeng.min.css"
+        "../node_modules/primeng/resources/primeng.min.css",
+        "../node_modules/chart.js/dist/Chart.js"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

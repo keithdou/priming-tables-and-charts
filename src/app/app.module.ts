@@ -12,12 +12,15 @@ import { HttpClientModule } from '@angular/common/http';
 // Primefaces
 import { AccordionModule } from 'primeng/components/accordion/accordion';
 import { ButtonModule } from 'primeng/components/button/button';
+import { ChartModule } from 'primeng/chart';
 import { DialogModule } from 'primeng/dialog';
 import { InputTextModule } from 'primeng/inputtext';
 import { MenuModule} from 'primeng/menu';
 import { MessagesModule} from 'primeng/messages';
+import { OverlayPanelModule} from 'primeng/overlaypanel';
 import { PanelModule } from 'primeng/components/panel/panel';
 import { RadioButtonModule } from 'primeng/primeng';
+import {ScrollPanelModule} from 'primeng/scrollpanel';
 import { TableModule } from 'primeng/table';
 import { TabMenuModule} from 'primeng/tabmenu';
 import { Message } from 'primeng/components/common/api';
@@ -63,6 +66,7 @@ const appRoutes: Routes = [
   imports: [
   BrowserModule,
   BrowserAnimationsModule,
+  ChartModule,
   FormsModule,
   HttpClientModule,
   ReactiveFormsModule,
@@ -71,9 +75,11 @@ const appRoutes: Routes = [
   InputTextModule,
   MenuModule,
   MessagesModule,
+  OverlayPanelModule,
   PanelModule,
   RadioButtonModule,
   RouterModule.forRoot(appRoutes),
+  ScrollPanelModule,
   TableModule,
   TabMenuModule
   ],

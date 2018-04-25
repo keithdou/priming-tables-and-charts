@@ -1,0 +1,98 @@
+.topnav {
+    overflow: hidden;
+    background-image: linear-gradient(rgb(21, 120, 201) 0%, rgb(11, 102, 177) 100%);
+}
+
+.topnav-hdg {
+	float: left;
+    text-align: center;
+    padding: 14px 14px;
+    text-decoration: none;
+    font-size: 24px;
+    color: #c1e1f4;
+}
+
+.sidenav {
+    height: 100%;
+    max-width: 230px;
+    min-width: 230px;
+    position: fixed;
+    z-index: 1;
+    top: 2;
+    left: 2;
+    background-color: rgb(61, 61, 61);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 2px;
+}
+
+
+.sidenav a {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none;
+    color: rgb(217, 217, 217);
+    display: block;
+    transition: 0.3s;
+    font-size: 16px !important;
+}
+
+.sidenav a:hover {
+    color: yellow;
+}
+
+.sidenav .closebtn {
+	padding: 1px 1px 1px 180px;
+	top: 0;
+    color:yellow;
+    text-decoration: none;
+    text-decoration-color: none;
+    font-size:24px !important;
+    text-align: center;
+}
+
+.mainContent {
+	margin-left: 236px;
+}
+
+.sidenav .menuLnk {
+	padding-left: 6px;
+}
+
+@media screen and (max-width: 1050px) {
+  .sidenav {
+  	padding: 1px 1px 1px 1px;
+  	max-width: 30px;
+  	min-width: 30px;
+  }
+  .sidenav a {
+  	padding: 8px 8px 8px 8px;
+  	font-size: 18px;
+  }
+  
+  .sidenav .closebtn {
+	padding: 1px 1px 1px 1px;
+  }
+  .menuLnk {
+  	visibility: hidden;
+  	padding-left: 2px;
+  }
+  .menuOptions {
+  	padding: 1px 1px 1px 1px;
+  }
+  #mainContentId {
+	margin-left: 36px;
+  }
+
+  #closeBtnLnk {
+    margin-left: 1px;
+  }
+
+  .menuLnk {
+    visibility: hidden;
+  }
+
+  #mySidenav {
+    max-width: 30px;
+    min-width: 30px;
+ }
+}

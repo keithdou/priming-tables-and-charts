@@ -1,17 +1,33 @@
 <div class="topnav">
  <span class="topnav-hdg">My Heading</span>
+ <div style="float:right;padding: 14px 14px;">
+     <div style="float:left">
+         <button type="text" pButton icon="fa fa-user" 
+                 style="color: white;background: #1a2f54;padding:6px;border-radius: 50%;" 
+                 [disabled] ="userProfileService.isLoggedIn() == false"
+                 (click)="op.show($event)">
+         </button>
+      </div>
+   <!--  <div style="float:right">
+         Logout
+     </div> -->
+ </div>
 </div>
+
+<p-overlayPanel #op>
+    {{userDetails1()}}
+    <br/>
+    {{userDetails2()}}
+</p-overlayPanel>
 
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" id="closeBtnLnk" class="closebtn" style="font-size:36px" (click)="toggleNav()">&#9776;</a>
   <div id='menuOptions'>
-  <!--  <a href="#"><i class="fa fa-square"></i><span class="menuLnk">About</span></a>
-    <a href="#"><i class="fa fa-square"></i><span class="menuLnk">Services</span></a>
-    <a href="#"><i class="fa fa-square"></i><span class="menuLnk">Clients</span></a>
-    <a href="#"><i class="fa fa-square"></i><span class="menuLnk">Contact</span></a>-->
+    <a routerLink="/catalogue-menu/welcome"><i class="fa fa-square"></i><span class="menuLnk">Home</span></a>
   </div>
 </div>
 
 <div id="mainContentId" class="mainContent">
   <p><router-outlet></router-outlet></p>
 </div>
+

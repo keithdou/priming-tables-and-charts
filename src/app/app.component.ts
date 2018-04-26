@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router'; 
+import { UserProfileService } from './services/user-profile.service';
+import { UserProfile } from './domain/userProfile';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +11,8 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'app';
 
-  constructor (private router: Router) {}
+  constructor (private router: Router,
+  	           private userProfileService : UserProfileService) {}
 
   openNav() {
 		document.getElementById("mySidenav").style.width = "230px";
@@ -41,5 +44,18 @@ export class AppComponent {
 	    }
 	    document.getElementById("mySidenav").style["min-width"] = newWidth;
 		document.getElementById("mySidenav").style["max-width"] = newWidth;
+	}
+
+	userDetails1() {
+		if (this.userProfileService.isLoggedIn()) {
+			return this.userProfileService.userProfile.username ;
+		}
+		return "";
+	}
+	userDetails2() {
+		if (this.userProfileService.isLoggedIn()) {
+			return this.userProfileService.userProfile.email ;
+		}
+		return "";
 	}
 }

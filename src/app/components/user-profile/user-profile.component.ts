@@ -38,10 +38,12 @@ export class UserProfileComponent implements OnInit {
 	}
 
 	confirmProfile() {
-		console.log("confirmProfile: valid form:" + this.userProfileForm.valid);
-		console.log("mobile before=" + this.userProfile.mobile);
+		//console.log("confirmProfile: valid form:" + this.userProfileForm.valid);
+		//console.log("mobile before=" + this.userProfile.mobile);
 		this.userProfile.mobile = this.userProfileForm.get('mobile').value;
-		console.log("mobile after =" + this.userProfile.mobile);
+		this.userProfile.email = this.userProfileForm.get('email').value;
+		this.userProfile.contactAddress = this.userProfileForm.get('contactAddress').value;
+		//console.log("mobile after =" + this.userProfile.mobile);
 		this.userProfileService.updateUserProfile(this.userProfile)
 		  .subscribe (
 				data => {

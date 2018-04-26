@@ -22,7 +22,7 @@ export class UserProfileService {
 
 	private userProfileList : UserProfile[];
 
-    userProfile : UserProfile;
+    public userProfile : UserProfile;
 
 	constructor(private _http: HttpClient) { console.log("UserProfileService created"); }
 

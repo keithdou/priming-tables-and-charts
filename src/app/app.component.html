@@ -1,11 +1,20 @@
 <div class="topnav">
- <span class="topnav-hdg">My Heading</span>
+ <div class="topnav-hdg">
+ 	My Heading
+    <br/>
+    <span style="font-size:12px;font-style: italic; color:yellow">ACME Constructions</span>
+ </div>  
  <div style="float:right;padding: 14px 14px;">
      <div style="float:left">
          <button type="text" pButton icon="fa fa-user" 
                  style="color: white;background: #1a2f54;padding:6px;border-radius: 50%;" 
                  [disabled] ="userProfileService.isLoggedIn() == false"
-                 (click)="op.show($event)">
+                 (click)="op1.show($event)">
+         </button>
+         <button type="text" pButton icon="fa fa-power-off" 
+                 style="color: white;background: #1a2f54;padding:6px;border-radius: 50%;" 
+                 [disabled] ="userProfileService.isLoggedIn() == false"
+                 (click)="op2.show($event)">
          </button>
       </div>
    <!--  <div style="float:right">
@@ -14,13 +23,20 @@
  </div>
 </div>
 
-<p-overlayPanel #op>
+<p-overlayPanel #op1 [style] = "{'background-color':'#001a66', 'color' : 'white'}">
+	<span>
     {{userDetails1()}}
     <br/>
     {{userDetails2()}}
     <br/>
     <br/>
-    <a routerLink="/user-profile"><span style="color:blue">update</span></a>
+    <hr style="color:white"/>
+    <a routerLink="/user-profile"><span style="color:white">update</span></a>
+</span>
+</p-overlayPanel>
+
+<p-overlayPanel #op2 [style] = "{'background-color':'#001a66', 'color' : 'white'}">
+    <a [routerLink]="" (click) ="logout();op2.hide()"><span style="color:white">logout</span></a>
 </p-overlayPanel>
 
 <div id="mySidenav" class="sidenav">

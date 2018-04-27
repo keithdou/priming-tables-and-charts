@@ -58,4 +58,12 @@ export class AppComponent {
 		}
 		return "";
 	}
+
+
+	logout() {
+		console.log("logout");
+		this.userProfileService.userProfile = null;
+		this.router.navigate(["/login"]);
+		return false;
+	}
 }

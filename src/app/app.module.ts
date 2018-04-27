@@ -13,7 +13,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { AccordionModule } from 'primeng/components/accordion/accordion';
 import { ButtonModule } from 'primeng/components/button/button';
 import { ChartModule } from 'primeng/chart';
+import { CalendarModule } from 'primeng/calendar';
 import { DialogModule } from 'primeng/dialog';
+import { InputMaskModule } from 'primeng/inputmask';
 import { InputTextModule } from 'primeng/inputtext';
 import { MenuModule} from 'primeng/menu';
 import { MessagesModule} from 'primeng/messages';
@@ -66,12 +68,14 @@ const appRoutes: Routes = [
   imports: [
   BrowserModule,
   BrowserAnimationsModule,
+  CalendarModule,
   ChartModule,
   FormsModule,
   HttpClientModule,
   ReactiveFormsModule,
   ButtonModule,
   DialogModule,
+  InputMaskModule,
   InputTextModule,
   MenuModule,
   MessagesModule,

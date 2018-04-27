@@ -54,7 +54,6 @@ export class UserProfileService {
 		.map(
 			data => {
 				this.userProfile = data;
-				console.log("updated profile:" + this.userProfile.mobile);
 				return this.userProfile;
 			});
 
@@ -82,5 +81,10 @@ export class UserProfileService {
 
 	isLoggedIn() {
 		return (this.userProfile != null);
+	}
+
+	logout() {
+		console.log("logout");
+		return false;
 	}
 }

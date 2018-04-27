@@ -6,6 +6,7 @@ export class UserProfile {
 	email = '';
 	mobile = '';
 	contactAddress = '';
+	dateOfBirth = '';
 
 	constructor(values: Object = {}) {
     	Object.assign(this, values);

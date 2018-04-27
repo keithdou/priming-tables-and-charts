@@ -18,7 +18,8 @@ export class UserProfileComponent implements OnInit {
 
 	userProfileForm : FormGroup;
 	userProfile : UserProfile;
-
+	msgs: Message[] = [];
+	
 	constructor(
 		private userProfileService : UserProfileService,
 		private messageservice     : MessageService,
@@ -29,27 +30,34 @@ export class UserProfileComponent implements OnInit {
 		console.log("ngOnInit");
 		this.userProfile = this.userProfileService.userProfile;
 		this.userProfileForm = this.fb.group({
-			    username       : [{value : this.userProfile.username,
-				                   disabled : true}],
+			username       : [{value : this.userProfile.username,
+				disabled : true}],
 				mobile         : [this.userProfile.mobile],
 				email          : [this.userProfile.email, Validators.required],
-				contactAddress : [this.userProfile.contactAddress]
+				contactAddress : [this.userProfile.contactAddress],
+				dateOfBirth	   : [new Date(this.userProfile.dateOfBirth)]
 			});
+		console.log("dob=" + this.userProfileForm.get('dateOfBirth').value);
 	}
 
 	confirmProfile() {
-		//console.log("confirmProfile: valid form:" + this.userProfileForm.valid);
+		console.log("confirmProfile: valid form:" + this.userProfileForm.valid);
 		//console.log("mobile before=" + this.userProfile.mobile);
-		this.userProfile.mobile = this.userProfileForm.get('mobile').value;
-		this.userProfile.email = this.userProfileForm.get('email').value;
-		this.userProfile.contactAddress = this.userProfileForm.get('contactAddress').value;
-		//console.log("mobile after =" + this.userProfile.mobile);
-		this.userProfileService.updateUserProfile(this.userProfile)
-		  .subscribe (
+		if (this.userProfileForm.valid) {
+			this.userProfile.mobile = this.userProfileForm.get('mobile').value;
+			this.userProfile.email = this.userProfileForm.get('email').value;
+			this.userProfile.contactAddress = this.userProfileForm.get('contactAddress').value;
+			this.userProfile.dateOfBirth = this.userProfileForm.get('dateOfBirth').value;
+			console.log("date after =" + this.userProfile.dateOfBirth);
+			this.userProfileService.updateUserProfile(this.userProfile)
+			.subscribe (
 				data => {
 					this.userProfile = data;
 					this.router.navigate(["/catalogue-menu/welcome"]);
 				});
+		} else {
+			this.msgs = [];
+			this.msgs.push({severity:'error', summary:'Validation error', detail:'Please enter all fields'});
+		}
 	}
-
 }

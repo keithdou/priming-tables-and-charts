@@ -19,10 +19,11 @@ import { InputMaskModule } from 'primeng/inputmask';
 import { InputTextModule } from 'primeng/inputtext';
 import { MenuModule} from 'primeng/menu';
 import { MessagesModule} from 'primeng/messages';
+import { OrganizationChartModule } from 'primeng/organizationchart';
 import { OverlayPanelModule} from 'primeng/overlaypanel';
 import { PanelModule } from 'primeng/components/panel/panel';
 import { RadioButtonModule } from 'primeng/primeng';
-import {ScrollPanelModule} from 'primeng/scrollpanel';
+import { ScrollPanelModule} from 'primeng/scrollpanel';
 import { TableModule } from 'primeng/table';
 import { TabMenuModule} from 'primeng/tabmenu';
 import { Message } from 'primeng/components/common/api';
@@ -38,6 +39,7 @@ import { CanActivateGuard } from './can-activate-guard';
 import { CatalogueMenuComponent } from './components/catalogue-menu/catalogue-menu.component';
 import { CatalogueListComponent } from './components/catalogue-list/catalogue-list.component';
 import { CatalogueGraphsComponent } from './components/catalogue-graphs/catalogue-graphs.component';
+import { OrgChartComponent } from './components/org-chart/org-chart.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 
 
@@ -48,7 +50,8 @@ const appRoutes: Routes = [
           children: [
             { path: 'welcome', component: WelcomeComponent },
             { path: 'catalogue-list', component: CatalogueListComponent },
-            { path: 'catalogue-graphs', component: CatalogueGraphsComponent}
+            { path: 'catalogue-graphs', component: CatalogueGraphsComponent},
+            { path: 'org-chart', component: OrgChartComponent}
             ], 
             canActivate: [CanActivateGuard] },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -63,6 +66,7 @@ const appRoutes: Routes = [
   CatalogueMenuComponent,
   CatalogueListComponent,
   CatalogueGraphsComponent,
+  OrgChartComponent,
   WelcomeComponent
   ],
   imports: [
@@ -79,6 +83,7 @@ const appRoutes: Routes = [
   InputTextModule,
   MenuModule,
   MessagesModule,
+  OrganizationChartModule,
   OverlayPanelModule,
   PanelModule,
   RadioButtonModule,

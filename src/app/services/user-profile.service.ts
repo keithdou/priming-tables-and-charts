@@ -6,6 +6,7 @@ import 'rxjs/add/operator/map';
 
 import { UserProfile } from '../domain/userProfile';
 import { State } from '../domain/state';
+import { OrgChartNode } from '../domain/orgChartNode';
 import { RestResponseResult } from '../domain/rest-response';
 
 const USER_PROFILE_URL = environment.userProfileUrl;
@@ -74,6 +75,20 @@ export class UserProfileService {
 			});
 	}
 
+	getOrgChart() : Observable<OrgChartNode> {
+
+		let url = "/assets/data/orgChart.json";
+
+		return this._http.get<OrgChartNode>(url)
+		.map(
+			data => {
+				console.log("orgChart=" + data);
+				let root = data as OrgChartNode;
+				console.log("root=" + root.name + " children=" + root.children.length);
+				console.log("first child=" + root.children[0].name);
+				return root;
+			});
+	}
 
 	areaToNumber(area : string) : number {
 		return parseInt(area.replace('SKM','').trim());

@@ -58,6 +58,12 @@
 	padding-left: 6px;
 }
 
+hr.hr_style {
+  border-top: 2px dashed gray;
+  border-bottom: 0px;
+  background-color:001a66;
+}
+
 @media screen and (max-width: 1050px) {
   .sidenav {
   	padding: 1px 1px 1px 1px;

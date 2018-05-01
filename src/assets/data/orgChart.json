@@ -8,7 +8,18 @@
       "name" : "child2",
       "children" : [
          {
-          "name" : "grandchild1"
+          "name" : "grandchild1",
+          "children" : [
+            {
+              "name" : "great-grandchild1"
+            },
+            {
+              "name" : "great-grandchild2"
+            },
+            {
+              "name" : "great-grandchild3"
+            }
+          ]
          },
          {
           "name" : "grandchild2"

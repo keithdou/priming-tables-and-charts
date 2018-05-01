@@ -1,3 +1,17 @@
+<h2>Who doesn't love a bit of recursion?</h2>
+
 <p>
-  <p-organizationChart [value]="chartData"></p-organizationChart>
+  <p-organizationChart [value]="chartData"
+                       selectionMode="single"
+                       [(selection)]="selectedNode" 
+                       (onNodeSelect)="onNodeSelect($event)">
+  </p-organizationChart>
+
+
+<p-dialog header="{{selectedNode.label}}" 
+          [(visible)]="displayNodeDetails" 
+          [width]="300"
+          minHeight="300">
+    {{selectedNode.label}} selected.....
+</p-dialog>
 </p>

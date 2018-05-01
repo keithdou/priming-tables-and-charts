@@ -20,6 +20,7 @@ npm install chart.js --save
 * PrimeNG tables - sorts and pagination
 * PrimeNG charts and drill-down using dialogues
 * Angular Router with child components and guards
+* Recursive tree processing for conversion of JSON to PrimeNG Org Chart data.
 
 
 ## Development server

@@ -4,7 +4,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 It demonstrates some basic tables and chart layouts using PrimeNG.  Data is retrieved from a public REST service at http://services.groupkt.com - a list of USA states.
 
-## Setup
+## Pre-requisites
+
+Angular/CLI, Nodejs, npm
+
+
+## Project Setup (from project base directory)
 
 npm install 
 npm install primeng --save
@@ -14,14 +19,20 @@ npm install chart.js --save
 
 ## Features (still under development)
 
-* Proxy server to avoid CORS issues (use npm start to launch)
+* Proxy server to avoid CORS issues 
 * REST service GET and PUT
 * Angular / PrimeNG forms with validation
 * PrimeNG tables - sorts and pagination
 * PrimeNG charts and drill-down using dialogues
+* PrimeNG overlays on menu header
 * Angular Router with child components and guards
 * Using httpClient with file data
 * Recursive tree processing for conversion of JSON to PrimeNG Org Chart data.
+
+## Runtime
+
+json-server --watch usersdb   (from base directory)
+npm start
 
 
 ## Development server

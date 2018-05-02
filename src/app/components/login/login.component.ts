@@ -49,6 +49,9 @@ export class LoginComponent implements OnInit {
 				},
 				err => {
 					console.log("doLogin failed http status:" + err.status);
+					this.msgs = [];
+					this.msgs.push({severity:'error', summary:'Unable to authenticate',
+						detail:'Are you sure the authentication service is running?'});
 				});
 		} else {
 			this.msgs = [];

@@ -1,0 +1,34 @@
+[
+	{
+		"name" 		: "Tynecastle Park",
+		"team"      : "Heart Of Midlothian",
+		"latitude" 	: "55.939217",
+		"longitude"	: "-3.232273",
+		"capacity"  : "20099",
+		"pic"       : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Tynecastle_Park%2C_January_2018.jpg/250px-Tynecastle_Park%2C_January_2018.jpg"
+	},
+	{
+		"name" 		: "Easter Road",
+		"team"      : "Hibernian",
+		"latitude" 	: "55.961667",
+		"longitude"	: "-3.165556",
+		"capacity"  : "20421",
+		"pic"       : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Easter_Road_2010.JPG/250px-Easter_Road_2010.JPG"
+	},
+	{
+		"name" 		: "Celtic Park",
+		"team"      : "Celtic",
+		"latitude" 	: "55.849722",
+		"longitude"	: "-4.205556",
+		"capacity"  : "60411",
+		"pic"       : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Celtic_Park_New.jpg/270px-Celtic_Park_New.jpg"
+	},
+	{
+		"name" 		: "Ibrox",
+		"team"      : "Rangers",
+		"latitude" 	: "55.853206",
+		"longitude"	: "-4.309258",
+		"capacity"  : "60411",
+		"pic"       : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Ibrox_Inside.jpg/250px-Ibrox_Inside.jpg"
+	}
+]

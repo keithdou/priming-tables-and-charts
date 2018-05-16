@@ -15,6 +15,7 @@ import { ButtonModule } from 'primeng/components/button/button';
 import { ChartModule } from 'primeng/chart';
 import { CalendarModule } from 'primeng/calendar';
 import { DialogModule } from 'primeng/dialog';
+import { GMapModule } from 'primeng/gmap';
 import { InputMaskModule } from 'primeng/inputmask';
 import { InputTextModule } from 'primeng/inputtext';
 import { MenuModule} from 'primeng/menu';
@@ -39,9 +40,9 @@ import { CanActivateGuard } from './can-activate-guard';
 import { CatalogueMenuComponent } from './components/catalogue-menu/catalogue-menu.component';
 import { CatalogueListComponent } from './components/catalogue-list/catalogue-list.component';
 import { CatalogueGraphsComponent } from './components/catalogue-graphs/catalogue-graphs.component';
+import { GmapComponent } from './components/gmap/gmap.component';
 import { OrgChartComponent } from './components/org-chart/org-chart.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
-
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -51,7 +52,8 @@ const appRoutes: Routes = [
             { path: 'welcome', component: WelcomeComponent },
             { path: 'catalogue-list', component: CatalogueListComponent },
             { path: 'catalogue-graphs', component: CatalogueGraphsComponent},
-            { path: 'org-chart', component: OrgChartComponent}
+            { path: 'org-chart', component: OrgChartComponent},
+            { path: 'gmap', component: GmapComponent}
             ], 
             canActivate: [CanActivateGuard] },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -67,7 +69,8 @@ const appRoutes: Routes = [
   CatalogueListComponent,
   CatalogueGraphsComponent,
   OrgChartComponent,
-  WelcomeComponent
+  WelcomeComponent,
+  GmapComponent
   ],
   imports: [
   BrowserModule,
@@ -75,6 +78,7 @@ const appRoutes: Routes = [
   CalendarModule,
   ChartModule,
   FormsModule,
+  GMapModule,
   HttpClientModule,
   ReactiveFormsModule,
   ButtonModule,

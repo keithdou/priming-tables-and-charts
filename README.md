@@ -6,8 +6,7 @@ It demonstrates some basic tables and chart layouts using PrimeNG.  Data is retr
 
 ## Pre-requisites
 
-Angular/CLI, Nodejs, npm
-
+Angular/CLI 6.0.1 or later, Nodejs, npm
 
 ## Project Setup (from project base directory)
 
@@ -16,6 +15,11 @@ npm install primeng --save
 npm install font-awesome
 npm install -g json-server
 npm install chart.js --save
+
+Until primeng is updated to v6 then you will also need to install rxjs-compat for backwards compatibility:
+
+npm install rxjs@6 rxjs-compat@6 --save   (see https://update.angular.io)
+
 
 ## Features (still under development)
 
@@ -28,6 +32,7 @@ npm install chart.js --save
 * Angular Router with child components and guards
 * Using httpClient with file data
 * Recursive tree processing for conversion of JSON to PrimeNG Org Chart data.
+* PrimeNG Gmap integration
 
 ## Runtime
 

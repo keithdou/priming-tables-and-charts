@@ -5,6 +5,7 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
 import { UserProfile } from '../domain/userProfile';
+import { FootballGround } from '../domain/footballGround';
 import { State } from '../domain/state';
 import { OrgChartNode } from '../domain/orgChartNode';
 import { RestResponseResult } from '../domain/rest-response';
@@ -87,6 +88,20 @@ export class UserProfileService {
 				console.log("root=" + root.name + " children=" + root.children.length);
 				console.log("first child=" + root.children[0].name);
 				return root;
+			});
+	}
+
+	listFootballGrounds() : Observable<FootballGround[]> {
+
+		let url = "/assets/data/footballGrounds.json";
+
+		return this._http.get(url)
+		.map(
+			data => {
+				console.log("data:");
+				console.log(data);
+				let groundList = data as FootballGround[];
+				return groundList;
 			});
 	}
 

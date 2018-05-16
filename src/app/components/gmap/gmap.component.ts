@@ -47,7 +47,7 @@
         let selectedGround = this.footballGrounds[event.overlay.customInfo];
         console.log(selectedGround);
         let title = event.overlay.getTitle();
-        this.infoWindow.setContent('' + title + '<br/>'  + selectedGround.team + '<br/>'  + selectedGround.capacity +
+        this.infoWindow.setContent('' + selectedGround.team + '<br/>'  + title + '<br/>'  + selectedGround.capacity +
            "<br/>" + "<img src='" + selectedGround.pic + "'/>");
         this.infoWindow.open(event.map, event.overlay);
         event.map.setCenter(event.overlay.getPosition());

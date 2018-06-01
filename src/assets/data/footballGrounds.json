@@ -28,7 +28,55 @@
 		"team"      : "Rangers",
 		"latitude" 	: "55.853206",
 		"longitude"	: "-4.309258",
-		"capacity"  : "60411",
+		"capacity"  : "50817",
 		"pic"       : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Ibrox_Inside.jpg/250px-Ibrox_Inside.jpg"
+	},
+	{
+		"name" 		: "Pittodrie",
+		"team"      : "Aberdeen",
+		"latitude" 	: "57.159167",
+		"longitude"	: "-2.088889",
+		"capacity"  : "20866",
+		"pic"       : ""
+	},
+	{
+		"name" 		: "Rugby Park",
+		"team"      : "Kilmarnock",
+		"latitude" 	: "55.604225",
+		"longitude"	: "-4.508122",
+		"capacity"  : "17889",
+		"pic"       : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Rugby_Park_Stadium%2C_Kilmarnock%2C_Scotland.jpg/260px-Rugby_Park_Stadium%2C_Kilmarnock%2C_Scotland.jpg"
+	},
+	{
+		"name" 		: "Fir Park",
+		"team"      : "Motherwell",
+		"latitude" 	: "55.779947",
+		"longitude"	: "-3.980078",
+		"capacity"  : "13677",
+		"pic"       : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Firpark.jpg/250px-Firpark.jpg"
+	},
+	{
+		"name" 		: "McDiarmid Park",
+		"team"      : "St Johnstone",
+		"latitude" 	: "56.409686",
+		"longitude"	: "-3.476928",
+		"capacity"  : "10696",
+		"pic"       : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/McDiarmid_Park.jpg/250px-McDiarmid_Park.jpg"
+	},
+	{
+		"name" 		: "Dens Park",
+		"team"      : "Dundee",
+		"latitude" 	: "56.474664",
+		"longitude"	: "-2.973594",
+		"capacity"  : "11506",
+		"pic"       : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Dundee_v_St._Johnstone.jpg/250px-Dundee_v_St._Johnstone.jpg"
+	},
+	{
+		"name" 		: "New Douglas Park",
+		"team"      : "Hamilton Accies",
+		"latitude" 	: "55.782156",
+		"longitude"	: "-4.058503",
+		"capacity"  : "5510",
+		"pic"       : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/New_Douglas_Park_-_1.jpg/250px-New_Douglas_Park_-_1.jpg"
 	}
 ]
